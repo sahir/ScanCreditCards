@@ -36,10 +36,10 @@ export default class App extends Component<{}> {
   scanCard() {
     CardIOModule.scanCard()
       .then(card => {
-        // the scanned card
+        console.warn(card);
       })
       .catch(() => {
-        // the user cancelled
+        console.warn('Error');
       });
   }
 }
